@@ -10,11 +10,11 @@ const App = () => {
 
   useEffect(() => {
     // Turlar ve şehirler API çağrıları
-    axios.get('http://127.0.0.1:8000/tours/')
+    axios.get('https://journeyvista-django-main.onrender.com/tours/')
       .then(response => setTours(response.data))
       .catch(error => console.error('Turlar yüklenirken hata:', error));
 
-    axios.get('http://127.0.0.1:8000/cities/')
+    axios.get('https://journeyvista-django-main.onrender.com/cities/')
       .then(response => setCities(response.data))
       .catch(error => console.error('Şehirler yüklenirken hata:', error));
   }, []);
